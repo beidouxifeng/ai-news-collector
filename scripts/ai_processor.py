@@ -21,7 +21,7 @@ class AIProcessor:
         "观点评论": "行业观点、分析评论"
     }
     
-    def __init__(self, api_key: Optional[str] = None, model: str = "deepseek-chat"):
+    def __init__(self, api_key: Optional[str] = None, model: str = "deepseek-ai/DeepSeek-V3"):
         self.api_key = api_key or os.getenv('DEEPSEEK_API_KEY')
         if not self.api_key:
             logger.warning("No API key provided, AI processing will be skipped")
@@ -29,7 +29,7 @@ class AIProcessor:
         self.model = model
         self.client = OpenAI(
             api_key=self.api_key,
-            base_url="https://api.deepseek.com"
+            base_url="https://api.siliconflow.cn/v1"
         ) if self.api_key else None
         
         self.batch_size = 5  # Process articles in batches
