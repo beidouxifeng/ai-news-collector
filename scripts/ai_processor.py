@@ -2,7 +2,7 @@ import os
 import json
 import logging
 from typing import List, Dict, Optional
-from openai import OpenAI
+import requests
 import time
 
 logging.basicConfig(level=logging.INFO)
@@ -27,12 +27,8 @@ class AIProcessor:
             logger.warning("No API key provided, AI processing will be skipped")
         
         self.model = model
-        self.client = OpenAI(
-            api_key=self.api_key,
-            base_url="https://api.siliconflow.cn/v1"
-        ) if self.api_key else None
-        
-        self.batch_size = 5  # Process articles in batches
+        self.api_url = "https://api.siliconflow.cn/v1/chat/completions"
+        self.batch_size = 5
     
     def _create_analysis_prompt(self, article: Dict) -> str:
         """Create prompt for AI analysis"""
@@ -59,24 +55,33 @@ class AIProcessor:
     
     def _analyze_article(self, article: Dict) -> Optional[Dict]:
         """Analyze a single article using AI"""
-        if not self.client:
+        if not self.api_key:
             logger.warning("AI client not initialized, skipping analysis")
             return self._get_default_analysis(article)
         
         try:
             prompt = self._create_analysis_prompt(article)
             
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
+            headers = {
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json"
+            }
+            
+            data = {
+                "model": self.model,
+                "messages": [
                     {"role": "system", "content": "你是一个专业的新闻内容分析师，擅长分类、摘要和热度评分。"},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.3,
-                max_tokens=500
-            )
+                "temperature": 0.3,
+                "max_tokens": 500
+            }
             
-            result_text = response.choices[0].message.content.strip()
+            response = requests.post(self.api_url, headers=headers, json=data, timeout=60)
+            response.raise_for_status()
+            
+            result = response.json()
+            result_text = result['choices'][0]['message']['content'].strip()
             
             # Parse JSON response
             try:
