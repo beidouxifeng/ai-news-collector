@@ -1,0 +1,3095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年02月03日 - AI资讯哨兵</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header .date {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-card .label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .category-section {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        .badge-重大新闻 { background: #dc2626; color: white; }
+        .badge-行业动态 { background: #ea580c; color: white; }
+        .badge-产品发布 { background: #16a34a; color: white; }
+        .badge-技术干货 { background: #2563eb; color: white; }
+        .badge-观点评论 { background: #9333ea; color: white; }
+        
+        .article {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 4px solid #667eea;
+        }
+        
+        .article:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 15px;
+        }
+        
+        .article-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1a1a1a;
+            flex: 1;
+        }
+        
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .article-title a:hover {
+            color: #667eea;
+        }
+        
+        .hot-score {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .article-summary {
+            color: #444;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .article-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .keyword {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .archive-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .archive-link:hover {
+            background: #5568d3;
+        }
+        
+        @media (max-width: 768px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-header {
+                flex-direction: column;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 AI资讯哨兵</h1>
+            <div class="date">2026年02月03日</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number">100</div>
+                <div class="label">总文章数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">54.5</div>
+                <div class="label">平均热度</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">6</div>
+                <div class="label">资讯来源</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">2</div>
+                <div class="label">新闻分类</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            
+            
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-badge badge-重大新闻">重大新闻</span>
+                    <span>10 篇文章</span>
+                </div>
+                
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3665582095016579?f=rss" target="_blank">氪星晚报｜北京2026年首场土拍揽金85.6亿元，字节跳动28亿拿下海淀地块；全球最快人形机器人发布；2025年我国有色金属主要产品产量再创新高</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:27</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 重大事件与技术突破</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        北京2026年首场土拍揽金85.6亿元，字节跳动28亿拿下海淀地块；全球最快人形机器人Bolt发布，时速10米/秒；2025年我国有色金属主要产品产量再创新高；采埃孚与宝马签署数十亿欧元传动系统供应协议；Snowflake与OpenAI达成2亿美元合作协议。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">土地拍卖</span>
+                        
+                        <span class="keyword">人形机器人</span>
+                        
+                        <span class="keyword">有色金属</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3667233081221763?f=rss" target="_blank">最前线｜「天顿数据」获福田资本8亿元战略投资，粤港湾控股加速转型AI智算</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 07:03</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 重大融资事件，涉及AI智算领域</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        深圳天顿数据科技有限公司获福田资本8亿元战略投资，资金将用于加强AI智算基础设施建设及拓展算力服务能力。天顿数据作为粤港湾控股的核心子公司，已在全国运营超3万台机架，总算力规模超5万P，并自主研发了弹性算力调度平台。公司2025年第一季度营收1.74亿元，在手订单超百亿元，服务客户近200家。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">天顿数据</span>
+                        
+                        <span class="keyword">AI智算</span>
+                        
+                        <span class="keyword">战略投资</span>
+                        
+                        <span class="keyword">粤港湾控股</span>
+                        
+                        <span class="keyword">算力服务</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3667222616056709?f=rss" target="_blank">磁悬浮输送线第一梯队，FRT无线供电技术行业领先，这家公司完成首轮千万元融资</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 06:53</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 突破性技术，行业领先</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        昆山纳博旺精工科技有限公司完成2500万元Pre-A轮融资，资金将用于研发投入、海内外拓展及团队建设。公司专注于磁悬浮柔性轨道传输系统，掌握多项核心技术，其无线供电（FRT）技术处于全球领先水平，广泛应用于锂电、3C、汽车等行业。未来五年市场规模预计超110亿元。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">磁悬浮输送线</span>
+                        
+                        <span class="keyword">FRT无线供电技术</span>
+                        
+                        <span class="keyword">融资</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3661841941013126?f=rss" target="_blank">DAU破亿后，豆包正让毕加索 “开口说话”｜最前线</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 02:20</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 突破性技术应用，重大行业合作</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        字节跳动旗下AI应用豆包与上海浦东美术馆合作，成为官方AI讲解员，通过独家数据合作和优化算法模型，提供精准艺术解读，解决艺术解释资源稀缺问题，推动文化普惠。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">豆包</span>
+                        
+                        <span class="keyword">AI讲解员</span>
+                        
+                        <span class="keyword">文化普惠</span>
+                        
+                        <span class="keyword">浦东美术馆</span>
+                        
+                        <span class="keyword">毕加索</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3666915646218885?f=rss" target="_blank">上交+清华团队做端侧AI：连续两轮融资过亿、服务苹果比亚迪宁德丨36氪首发</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 01:39</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 突破性技术+重大融资</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        上海辛米尔科技连续完成亿元A轮及A+轮融资，专注于端侧AI的感算一体技术研发与商业化落地。公司核心技术突破传统架构，已在智能制造、汽车、新能源等领域广泛应用，并计划拓展海外市场。团队背景强大，产品性能优越，未来将深耕工业Agent系统，拓展具身智能与精密传感领域。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">端侧AI</span>
+                        
+                        <span class="keyword">感算一体</span>
+                        
+                        <span class="keyword">智能制造</span>
+                        
+                        <span class="keyword">融资</span>
+                        
+                        <span class="keyword">商业化落地</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3666826665075331?f=rss" target="_blank">8点1氪丨“杰我睿”后，水贝又一黄金平台现兑付异常；马斯克否认上过爱泼斯坦私人小岛；SpaceX宣布收购人工智能企业xAI</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 00:11</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 涉及重大行业事件和巨头决策</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        文章报道了多个热点新闻：深圳水贝黄金交易平台“云点当”出现兑付异常；马斯克否认与爱泼斯坦有关联，并暗示克林顿、盖茨等人有罪；SpaceX宣布收购人工智能企业xAI。此外，还涉及茅台高管变动、华谊兄弟王中磊被限消等行业动态。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">黄金兑付异常</span>
+                        
+                        <span class="keyword">马斯克</span>
+                        
+                        <span class="keyword">SpaceX收购xAI</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3666200370143873?f=rss" target="_blank">邵氏兄弟：百年港牌，今成华人文化上市跳板</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 13:32</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 巨头重大决策，行业影响深远</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        邵氏兄弟拟收购华人文化核心影视资产，华人文化借此反向借壳上市。交易导致邵氏中小股东权益大幅缩水，市场反应剧烈。华人文化计划整合资源实现全链路协同，但面临多重考验。香港娱乐产业衰落，TVB改革收效甚微。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">邵氏兄弟</span>
+                        
+                        <span class="keyword">华人文化</span>
+                        
+                        <span class="keyword">反向借壳</span>
+                        
+                        <span class="keyword">TVB</span>
+                        
+                        <span class="keyword">影视资产</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3665581867737728?f=rss" target="_blank">氪星晚报｜智元机器人将举办全球首个大型机器人晚会“机器人奇妙夜”；黄金一度暴跌1000美元，业内提示警惕抄底风险；中共中央、国务院：培育京津雄地区创新三角</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 12:04</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 多领域重大事件，影响力广泛</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        文章涵盖了多个重大新闻，包括特斯拉实现干电极电池规模化生产的技术突破，智元机器人将举办全球首个大型机器人晚会，中共中央、国务院提出培育京津雄地区创新三角的战略规划，以及黄金市场的大幅波动和业内对抄底风险的提示。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">特斯拉</span>
+                        
+                        <span class="keyword">智元机器人</span>
+                        
+                        <span class="keyword">京津雄创新三角</span>
+                        
+                        <span class="keyword">黄金暴跌</span>
+                        
+                        <span class="keyword">AI激励</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667537577862024?f=rss" target="_blank">奈飞联席CEO就收购华纳兄弟交易遭美国参议院委员会质询</a>
+                        </div>
+                        <div class="hot-score">热度: 85</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:42</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 巨头重大决策，影响行业格局</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        奈飞联席CEO泰德・萨兰多斯出席美国参议院听证会，就公司拟以827亿美元收购华纳兄弟探索公司的交易接受质询，听证会核心聚焦该交易对流媒体娱乐行业竞争格局的影响。美国司法部正对这宗交易展开审查，同时派拉蒙 - 天舞传媒也提出了竞争性收购要约。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">奈飞</span>
+                        
+                        <span class="keyword">华纳兄弟</span>
+                        
+                        <span class="keyword">收购</span>
+                        
+                        <span class="keyword">听证会</span>
+                        
+                        <span class="keyword">流媒体</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667562553090946?f=rss" target="_blank">惠普任命临时首席执行官</a>
+                        </div>
+                        <div class="hot-score">热度: 75</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:47</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 巨头重大决策，影响较大</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        惠普宣布任命Bruce Broussard为临时首席执行官，接替已辞职的Enrique Lores，后者辞去总裁兼首席执行官及董事会成员职务，寻求新的职业发展机会。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">惠普</span>
+                        
+                        <span class="keyword">临时首席执行官</span>
+                        
+                        <span class="keyword">Bruce Broussard</span>
+                        
+                        <span class="keyword">Enrique Lores</span>
+                        
+                        <span class="keyword">辞职</span>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="category-section">
+                <div class="category-title">
+                    <span class="category-badge badge-行业动态">行业动态</span>
+                    <span>90 篇文章</span>
+                </div>
+                
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3667482319987334?f=rss" target="_blank">机器人扎堆上春晚，花一亿元，抢行业“卡位赛”</a>
+                        </div>
+                        <div class="hot-score">热度: 75</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:20</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 行业重要动态，热度较高</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        文章探讨了机器人公司争相登上春晚的现象，揭示了背后的行业竞争和商业考量。登上春晚的费用高达1亿元，公司们希望通过这一平台提升知名度、获取订单和融资，从而在具身智能行业的“卡位赛”中占据优势。不同梯队的公司对春晚的期待各异，有的为了提升二级市场影响力，有的则希望借此确立市场坐标。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">机器人</span>
+                        
+                        <span class="keyword">春晚</span>
+                        
+                        <span class="keyword">具身智能</span>
+                        
+                        <span class="keyword">行业竞争</span>
+                        
+                        <span class="keyword">商业化</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/p/3667359645705090?f=rss" target="_blank">年轻人，疯抢「健康福」</a>
+                        </div>
+                        <div class="hot-score">热度: 75</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 09:12</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 反映行业趋势，时效性强</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        文章报道了年轻人健康意识的提升，以及支付宝集福活动中“健康福”成为新宠的现象。通过具体案例和数据，展示了健康问题年轻化的趋势，以及年轻人如何利用AI工具进行健康管理。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">健康意识</span>
+                        
+                        <span class="keyword">支付宝集福</span>
+                        
+                        <span class="keyword">AI健康管理</span>
+                        
+                        <span class="keyword">年轻人</span>
+                        
+                        <span class="keyword">健康焦虑</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667533457236873?f=rss" target="_blank">瑞银：存储芯片2028年才有可能出现有意义的供给缓解</a>
+                        </div>
+                        <div class="hot-score">热度: 75</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:35</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 行业重要动态，影响广泛</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        瑞银分析师指出，存储芯片市场短期内可关注希捷与西部数据两大HDD巨头，中长期则押注于HBM、高端DDR及数据中心企业级SSD的供需缺口与定价权。由于AI数据中心扩张加剧供需失衡，预计2028年才可能出现有意义的供给缓解。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">存储芯片</span>
+                        
+                        <span class="keyword">瑞银</span>
+                        
+                        <span class="keyword">供需失衡</span>
+                        
+                        <span class="keyword">AI数据中心</span>
+                        
+                        <span class="keyword">HBM</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667584584885124?f=rss" target="_blank">热门中概股美股盘前涨跌不一，阿里巴巴跌超2%</a>
+                        </div>
+                        <div class="hot-score">热度: 70</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:59</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 市场波动，影响有限</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        热门中概股在美股盘前交易中表现不一，阿里巴巴、百度、哔哩哔哩等下跌超过2%，京东、网易下跌超过1%，而小鹏汽车、拼多多、蔚来等则上涨超过1%，理想汽车微涨0.6%。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">中概股</span>
+                        
+                        <span class="keyword">美股盘前</span>
+                        
+                        <span class="keyword">阿里巴巴</span>
+                        
+                        <span class="keyword">小鹏汽车</span>
+                        
+                        <span class="keyword">涨跌不一</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667576829911943?f=rss" target="_blank">美股大型科技股盘前普涨，英特尔涨超3%</a>
+                        </div>
+                        <div class="hot-score">热度: 70</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:52</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 市场动态，影响较大</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        美股大型科技股在盘前交易中普遍上涨，英特尔涨幅超过3%，谷歌、特斯拉等也有超过1%的涨幅，亚马逊、英伟达、微软和Meta小幅上涨，仅苹果小幅下跌0.62%。
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">美股</span>
+                        
+                        <span class="keyword">科技股</span>
+                        
+                        <span class="keyword">盘前交易</span>
+                        
+                        <span class="keyword">英特尔</span>
+                        
+                        <span class="keyword">苹果</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667558526591876?f=rss" target="_blank">2025年我国规上轻工业增加值同比增长5.3%</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:33</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        从中国轻工业联合会获悉，2025年，我国轻工业经济运行态势总体平稳。其中，规模以上轻工业增加值同比增长5.3%；轻工业以占全国工业13%的资产，实现了全国工业16.5%的营业收入和18.8%的利润。（新华社）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667530958742408?f=rss" target="_blank">辉瑞第四季度营收175.6亿美元</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:30</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        辉瑞2月3日公布第四季度财报显示，营收175.6亿美元，调整后每股收益0.66美元。辉瑞仍然预测2026全年营收595亿美元至625亿美元，调整后每股收益2.80美元至3.00美元。（界面）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667553391403910?f=rss" target="_blank">中央网信办召开《生活服务类平台算法负面清单（试行）》推进部署会议</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:28</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，据网信中国消息，2月3日上午，中央网信办在北京召开《生活服务类平台算法负面清单（试行）》推进部署会议。会议强调，生活服务类平台通过为多方利益主体提供交易撮合、经营场所、信息交流，极大地降低交易成本，满足民生需求，同时也创造了新的就业岗位。算法作为平台生态系统中利益分配调整的主要载体和重要枢纽，在智能匹配供需、改善用户体验、提高运营效率等方面发挥了正向作用，但同时也存在算法黑箱、算法歧视、算法合谋等问题，受到社会各界高度关注。制定实施《负面清单》，就是为了精准有效解决这些问题，让算法更好服务于社会民生。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667551253226120?f=rss" target="_blank">燕麦科技：公司收购的AXIS-TEC具有硅光晶圆测试相关产品</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:26</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，燕麦科技公告，公司股票连续3个交易日内收盘价格涨幅偏离值累计达到30%，属于股票交易异常波动情形。近期资本市场对“CPO”“光通信”“硅光晶圆测试”等概念关注度较高，相关板块市场表现较为活跃。公司收购的AXIS-TEC具有硅光晶圆测试的相关产品，但是相关产品的市场推广处于起步阶段，未来发展仍面临不确定性，目前销售收入占比不足1%，未对公司业绩构成重大影响，请投资者注意理性判断。公司作为电子产业智能测试设备和系统解决方案提供商，目前主营业务未发生重大变化。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667529785697158?f=rss" target="_blank">西门子能源将在美国投资10亿美元</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:23</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        受电力需求激增推动，西门子能源股份公司计划未来两年在美国的制造产能领域投资10亿美元（约合8.47 亿欧元）。这家德国能源基础设施制造商2日表示，大部分资金将用于扩建北卡罗来纳州、佛罗里达州、得克萨斯州、阿拉巴马州和纽约州的现有工厂，同时在密西西比州新建一座工厂。此次投资将聚焦燃气轮机及电网技术的生产制造，包括变压器的生产与运维服务，预计将创造约1500个就业岗位。（新浪财经）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667520487940739?f=rss" target="_blank">凯龙高科：拟购买金旺达70%股权，2月4日复牌</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:16</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，凯龙高科披露重组预案，公司拟通过发行股份及支付现金的方式向许照旺、安义拓荒者购买深圳市金旺达机电有限公司（简称“金旺达”）70%股权，并向公司实控人臧志成发行股份募集配套资金。此次交易的价格尚未确定。金旺达专注研发与生产精密传动功能部件。通过此次收购，公司可快速获取精密传动功能部件的技术体系、成熟产能与优质客户资源，在原有业务基础上增加精密传动功能部件业务，有助于公司完善机器人产业链布局。公司股票2月4日复牌。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667519215837826?f=rss" target="_blank">默沙东第四季度净利润29.63亿美元，同比减少21%</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:09</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        默沙东2月3日发布第四季度财报显示，全球销售额164亿美元，同比增长5%；按GAAP计算，净利润29.63亿美元，同比减少21%，每股收益1.19美元，同比减少20%。2025年全年全球销售额650.11亿美元，同比增长2%；按GAAP计算，净利润182.54亿美元，同比增长7%，每股收益6.74美元，同比增长8%。（界面）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667515387192193?f=rss" target="_blank">印度最高法院质疑WhatsApp与Meta实体共享用户数据政策</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:00</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        印度最高法院周二警告说，它可能会重新禁止 Meta 旗下WhatsApp 与其他集团实体共享数据，称该消息应用的隐私政策误导了用户，两位出庭律师如是说。自2024年11月以来，WhatsApp一直与印度反垄断监管机构存在争议 ，当时监管机构对该公司处以2540万美元的罚款，并禁止WhatsApp在五年内出于广告目的与其他Meta实体共享用户数据。上诉法院后来取消了数据共享限制，但保留了罚款，促使双方诉诸最高法院。（新浪财经）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667509657674371?f=rss" target="_blank">智洋创新：筹划购买灵明光子控制权 股票停牌</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:54</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，智洋创新公告，公司正在筹划以发行股票、定向发行可转换公司债券、支付现金等方式购买深圳市灵明光子科技有限公司控制权，同时拟募集配套资金。本次交易预计构成重大资产重组，且构成关联交易。股票自2026年2月4日起停牌，预计停牌时间不超过5个交易日。深圳市灵明光子科技有限公司经营范围为混合集成电路、片式元器件、光电子器件及传感器等新型电子元器件的技术开发、生产、销售及技术服务。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667497827033736?f=rss" target="_blank">百事公司第四季度净营收293.4亿美元，同比增长5.6%</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:48</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        百事公司2月3日公布第四季度财报显示，净营收293.4亿美元，同比增长5.6%；每股收益1.85美元，上年同期1.11美元；核心每股收益2.26美元，上年同期1.96美元。（界面）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667484190417799?f=rss" target="_blank">机构今日买入恒邦股份等31股，卖出钧达股份2.09亿元</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:42</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        盘后数据显示，2月3日龙虎榜中，共47只个股出现了机构的身影，有31只股票呈现机构净买入，16只股票呈现机构净卖出。当天机构净买入前三的股票分别是恒邦股份、盛达资源、铜陵有色，净买入金额分别是9.43亿元、4.17亿元、3.37亿元。当天机构净卖出前三的股票分别是钧达股份、万丰股份、杰普特，净流出金额分别是2.09亿元、4174万元、3505万元。（第一财经）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667491913327497?f=rss" target="_blank">嘉事堂：公司控股股东将变更为同仁堂集团，股票复牌</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:37</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，嘉事堂公告，2月2日，公司股东光大实业、光大健康与中国北京同仁堂（集团）有限责任公司（简称“同仁堂集团”）签署了《股份转让协议》，协议约定光大实业、光大健康分别将其持有的公司4118.08万股股份、4187.64万股股份转让给同仁堂集团。本次交易完成后，公司控股股东将变更为同仁堂集团，实际控制人将变更为北京市人民政府国有资产监督管理委员会。经申请，公司股票自2026年2月4日（星期三）上午开市起复牌。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667489373315970?f=rss" target="_blank">MOGOX与LG电子达成战略合作</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:31</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，2月3日，蘑菇车联与LG电子达成战略合作，双方将围绕自动驾驶车辆部署与运营、数字道路基础设施建设及城市智能治理等领域加强业务协同与合作，联合拓展中韩及全球自动驾驶市场。这也是继蘑菇车联与比亚迪和MKX Technologies、autonoma组成的联合体独家中标新加坡官方首个L4级自动驾驶巴士项目后，蘑菇车联在海外市场的又一次突破。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667486710571656?f=rss" target="_blank">OpenAI多名资深研究人员离职</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:24</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        据报道，OpenAI正在将更多资源优先投入其旗舰产品ChatGPT的持续改进，这一战略调整引发多名资深研究人员在近期相继离职。多位现任及前任员工表示，公司正在减少对部分长期、探索性研究项目的投入，以应对来自谷歌和Anthropic等竞争对手的压力。过去数月内离开OpenAI的高级员工包括研究副总裁Jerry Tworek、模型政策研究负责人Andrea Vallone以及经济学家Tom Cunningham。知情人士称，这些离职与公司资源分配方向变化密切相关。（财联社）
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://36kr.com/newsflashes/3667475524871040?f=rss" target="_blank">上期所调整燃料油等期货相关合约涨跌停板幅度和交易保证金比例</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:20</span>
+                        <span>📌 36氪</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        36氪获悉，上期所公告，自2026年2月5日（星期四）收盘结算时起，涨跌停板幅度和交易保证金比例调整如下：燃料油、石油沥青、丁二烯橡胶、天然橡胶期货已上市合约的涨跌停板幅度调整为9%，套保持仓交易保证金比例调整为10%，一般持仓交易保证金比例调整为11%；纸浆、胶版印刷纸期货已上市合约的涨跌停板幅度调整为7%，套保持仓交易保证金比例调整为8%，一般持仓交易保证金比例调整为9%。
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831096.html?f=wangzhan" target="_blank">价格只有1/50，印度仿制药真的靠谱吗？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 10:00</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        拜耳肝癌药一年花60万，印度仿制药只要1万多，价格不到3%。今天的印度已经成为了世界药房，它供应着全球50%的疫苗和20%的仿制药，那么印度是如何做到的？这些药靠谱吗？下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4832087.html?f=wangzhan" target="_blank">AI时代，我们的PC到底“芯”在哪里？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 09:21</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        过去一年，我们可能都对电脑产生过同一种误解：以为它变聪明了，结果只是变累了。AI 功能看似丰富，可运行起来风扇先醒、电量先掉。灵感刚来，硬件掉队。问题也许不在 AI，而在于——我们一直在用一套没为 AI 准备过的 PC 结构。本期视频，我们从真实使用出发，看看那些高频、持续发生的 AI 场景，在一台搭载Intel Core Ultra的PC中，到底该由谁来完成。当算力回到本地，当续航不再成为限制，PC 也许会迎来它近十年来，最重要的一次改变。而这一切，才刚刚开始。下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831562.html?f=wangzhan" target="_blank">折叠屏下半场：苹果的生态优势，将成为压倒性的武器</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 02:15</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        2026折叠屏大预测：苹果首年就将抢占22%份额，全球出货量涨30%！以后折叠屏不再是玩具，苹果的这波进场将解锁折叠屏的新美学！下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831412.html?f=wangzhan" target="_blank">预亏820亿，一口气看懂，万科3000亿利润去哪了？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 01:45</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        万科预亏820亿，创A股史上最大单年亏损，三年从“利润王”变“亏损王”。那么这么多年万科卖房挣的钱都哪里去了？下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831342.html?f=wangzhan" target="_blank">特斯拉，可能得看SpaceX的脸色了？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 00:26</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        作者｜Eastland头图｜视觉中国许多人相信2026年将是SpaceX的上市之年，承销商、募集金额、目标估值、IPO日期都传得有鼻子有眼。据外媒报道，当地时间2月2日，埃隆·马斯克旗下的太空探索技术公司（SpaceX）宣布收购人工智能初创公司xAI，合并后的公司估值将达到1.25万亿美元。这一收购或与特斯拉的困局紧密关联，回顾2025年11月，特斯拉股东大会批准了“薪酬激励方案”。但根据刚刚发布的《2025年报》，特斯拉现有业务（汽车、FSD、机器人）无法撑起1.5万亿美元市值。假如特斯拉因业绩欠佳、股价崩盘，“万亿美元薪酬”泡汤。就算SpaceX成功上市，也无法弥补马斯克的损失。而在并入收
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831658.html?f=wangzhan" target="_blank">疯狂的赌局被更疯狂的金价拉爆：水贝黄金爆雷事件</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 08:30</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        穿越周期的黄金：避险资产逐渐被炒成了投机工具。沉默的压仓石，如今而成了喧嚣的赌桌筹码，而率先倒下的，却是百亿级别的金融赌场。下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831707.html?f=wangzhan" target="_blank">为什么医生大多推荐飞利浦电动牙刷？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 08:09</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        应该用什么电动牙刷？你的牙科医生给到的答案很可能是......下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831219.html?f=wangzhan" target="_blank">为什么现代人穿的衣服都是塑料瓶做的“聚酯纤维”？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 06:00</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        用塑料瓶子做的聚酯纤维衣服卖十几块钱也就算了，怎么几百上千的大牌衣服也用聚酯纤维割韭菜？古人穿的是绫罗绸缎，结果现代人被聚酯纤维衣服电得嗷嗷叫。今年热搜上被骂得最惨的面料成分当属“塑料瓶子做的聚酯纤维”，那么事实真的如此吗？下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831101.html?f=wangzhan" target="_blank">银价谁说了算？金银比跌破50的真相</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 05:00</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        白银，这个曾经的黄金小弟，2026年开年直接炸裂，单月涨幅50%，连基金都怕大家买疯了，选择停牌谢客。白银为什么涨疯了？下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="http://www.huxiu.com/article/4831501.html?f=wangzhan" target="_blank">让最火的AI产品，来治愈你的AI焦虑</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 02:25</span>
+                        <span>📌 虎嗅网</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        它的最新名字叫OpenClaw，Clawdbot/Moltbot都已成为历史，这样的更名速度，也是AI时代的特征吧。下载虎嗅APP，第一时间获取深度独到的商业科技资讯，连接更多创新人群与线下活动
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/106004" target="_blank">社区速递 128 | 小红书里的「奇怪知识」、打开 14 天的血糖盲盒</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 08:46</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        除了首页时间流和侧栏的精选展位，少数派Matrix社区还有很多优秀内容因条件所限无法得到有效曝光。因此我们决定重启Matrix周报，并在此基础上添加更多社区内容、作者投稿新玩意呈现给大家。🏆年度创作少 ...查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105893" target="_blank">不是只做样子货：铁三角 ATH-CKS50TW2 星战联名耳机体验</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 07:20</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        相较于我们提到过的 TWX7，CKS50TW2 并没有把很多功夫都下到声音调校上，而是做了一个各方面功能都挺有意思的产品。查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105644" target="_blank">App+1 | 开源免费、多人协作，用 Cent 一站式搞定记账</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 03:30</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        支持二级分类，自定义标签，支持不同维度的统计，丰富的筛选功能，新增了预算管理，支持上传图片附件，未来还会增加地图功能，最重要的是，它完全免费。查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105996" target="_blank">派早报：SpaceX 收购 xAI，Adobe 停运 Animate 等</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 00:37</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        鹰角网络回应《终末地》外服支付异常事件，OpenClaw 技能库已出现多款恶意技能等查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105972" target="_blank">派评 | 近期值得关注的 App</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 09:59</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        >下载少数派2.0客户端、关注少数派公众号，解锁全新阅读体验📰>实用、好用的正版软件，少数派为你呈现🚀查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/86328" target="_blank">2026 春运买票指北：乡愁愈烈，莫添烦恼</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 07:00</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        从火车票放票原理开始，让我们探究如何在高峰期买到一张火车票。查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105660" target="_blank">又要上台讲 PPT？用 AutoHotkey 解决翻页笔「断连」时刻</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 03:53</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Matrix首页推荐Matrix是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。我们会不定期挑选Matrix最优质的文章，展示来自用户的最真实的体验和观点。文章代表作者个人观点 ...查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105959" target="_blank">派早报：Moltbook 引发 AI 智能体新热度与安全担忧</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 00:59</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Moltbook 引发 AI 智能体新热度与安全担忧微软计划集中精力修复 Windows 11 稳定性英伟达 Shield TV 发布十年仍获系统更新电视厂商集体淡出 8K 市场ChatGPT 将下架 GPT-4o 等多款旧模型Anthropic 称过度依赖 AI 编程可能导致初级开发者技能显著退化看看就行的小道消息少数派的近期动态你可能错过的好文章查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105948" target="_blank">Apple 新春大片如期而至，今年的故事有点不一样</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-01 03:30</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        每一年iPhone新春大片的上映，都在告诉着我们新春的脚步将近；而每一支片中蕴含的细腻情感，也在回应着我们的情绪共鸣，承载对新一年的期望。《碰见你》是Apple推出的第九支iPhone新春大片，也是又 ...查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://sspai.com/post/105946" target="_blank">本月玩什么｜明日方舟：终末地、孤山独影、暴走甜心</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-01-31 15:58</span>
+                        <span>📌 少数派</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        你的每月游玩清单（2026 年 1 月版）。查看全文
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/exIBcW5kAD0ETHxLWI92?utm_source=rss&utm_medium=article" target="_blank">Cookie 真的要被淘汰了？IEEE 推出 MyTerms，新隐私规则开始反杀互联网</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 21:43</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/7m0iybMGsOVbJ4UZy7a9?utm_source=rss&utm_medium=article" target="_blank">模力工场 031 周 AI 应用榜：“数字同事”崛起，AI 从对话走向实干</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 20:00</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/wjsMDXuDlX0k9ZTN1KcG?utm_source=rss&utm_medium=article" target="_blank">HTML Invoker Commands 在所有主流浏览器中实现基础支持</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 19:24</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/7Jd4cZ29AWWZLIgXd81U?utm_source=rss&utm_medium=article" target="_blank">OpenAI 与 Anthropic 推出专注医疗场景的 AI 平台</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 19:20</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/j48DBWvVehkxkeE8AhXH?utm_source=rss&utm_medium=article" target="_blank">百度端侧大模型安全建设实践：在算力与保障之间找到平衡</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 18:54</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/avx0cJiB7tR3uorMOxDd?utm_source=rss&utm_medium=article" target="_blank">“AI火了，我们却快完了！”顶级开源框架Tailwind之父含泪裁掉75%兄弟：半年后，这个项目可能就没了</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:44</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/GcgASrAjRRRDDqlHsPSY?utm_source=rss&utm_medium=article" target="_blank">“我让AI在我的电脑上为所欲为！”OpenClaw创始人：爆火的MoltBook社交网络，技术其实简单到离谱</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:12</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/fkhqyd4CqzHSVaKYCvVe?utm_source=rss&utm_medium=article" target="_blank">极客邦科技创始人霍太稳对谈前腾讯高级工程师、WorkAny 开发者艾逗笔</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:04</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/minibook/p1vg8jZCDe63u4WFq9NL?utm_source=rss&utm_medium=article" target="_blank">中国软件技术发展洞察和趋势预测研究报告 2026</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:00</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/c5kK0GolN7EyHu1uB8VV?utm_source=rss&utm_medium=article" target="_blank">容器可观测新视角： SysOM 延时抖动监控助力定位业务抖动原因</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 15:58</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/R77uD5jABlSraSPLX2Oo?utm_source=rss&utm_medium=article" target="_blank">xAI员工赢麻了！全员换股SpaceX，AI月烧10亿美元终于有人兜底了</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 15:50</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/aCC7cKjuOwywkM4yN96E?utm_source=rss&utm_medium=article" target="_blank">新瓶旧酒or涅槃重生？操作系统的 AI 进化终将走向何方？</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:49</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/8vLV6AuAhxE6VNP7aFv7?utm_source=rss&utm_medium=article" target="_blank">AI唱得比顶流歌手还精准！周亚辉盛赞百倍跃进，高晓松直言：AI 和我不是一个创作机制</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 09:50</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/lXF76ffJ3fjrk3QLa2T9?utm_source=rss&utm_medium=article" target="_blank">Moltbook 底裤被扒了！150万用户99%是水军，创始团队自导自演</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 20:00</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/64NWESmMaweR3zAKhd60?utm_source=rss&utm_medium=article" target="_blank">Moltbook“造假”刷屏，Clawdbot创始人犀利批判Agent：缺了人纯烧token、只出烂代码，没“审美”</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 18:35</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/SDsUhSvWcp0PVTXNXArm?utm_source=rss&utm_medium=article" target="_blank">给大模型集体“把脉”，清程极智发布 AI Ping 平台</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 17:45</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/tMzf85eTIRvsVABskVfd?utm_source=rss&utm_medium=article" target="_blank">百万账户造假，真实用户数据”裸奔“！从 Moltbook 塌房，看AI时代的隐私暗战</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 17:36</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/y8L3Ml8juDeZ56MuUvmc?utm_source=rss&utm_medium=article" target="_blank">停招初级工程师！大厂样板无实战价值、软件黑灯工厂死路一条，三位AI 编程老炮：AI越骂越灵！</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 17:11</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/article/LvmcQyQOWMHTep7SgASf?utm_source=rss&utm_medium=article" target="_blank">机器人抢上春晚，出场费1亿；DeepSeek招兵买马，布局AI搜索与智能体；英伟达CEO黄仁勋否认对OpenAI不满 | AI周报</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 17:03</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.infoq.cn/minibook/UZTN39WZ81MhFteW9uDW?utm_source=rss&utm_medium=article" target="_blank">2026年中国企业AI人才与组织发展报告</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 16:33</span>
+                        <span>📌 InfoQ</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        点击查看原文>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/lotus-health-nabs-35m-for-ai-doctor-that-sees-patients-for-free/" target="_blank">Lotus Health nabs $35M for AI doctor that sees patients for free</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 17:14</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        This AI doctor is licensed in all 50 states, the startup says. The deal was led by CRV and Kleiner Perkins.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Biotech & Health</span>
+                        
+                        <span class="keyword">Venture</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/french-police-search-x-office-in-paris-summons-elon-musk-for-questioning/" target="_blank">French police search X office in Paris, summons Elon Musk for questioning</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:55</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        The Paris prosecutor’s office announced that it is expanding a criminal investigation into X for alleged crimes, including the possession and distribution of child sexual exploitation material.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Security</span>
+                        
+                        <span class="keyword">child sexual abuse material</span>
+                        
+                        <span class="keyword">CSAM</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/what-tech-ceos-and-executives-have-said-about-ice-in-minnesota/" target="_blank">What tech CEOs and executives have said about ICE’s actions in Minnesota</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:13</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        The Trump administration’s approach to immigration has reached a level of violence that the tech industry cannot ignore. Here's how tech leaders are responding to the moment.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Government & Policy</span>
+                        
+                        <span class="keyword">evergreen</span>
+                        
+                        <span class="keyword">Executives</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/tiktok-recovers-from-dip-in-usage-that-benefited-rival-apps-following-u-s-ownership-change/" target="_blank">TikTok recovers from dip in usage that benefited rival apps following US ownership change</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 15:57</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        TikTok usage dropped following ownership change, benefiting rival apps. But now, its numbers are climbing again.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">Social</span>
+                        
+                        <span class="keyword">skylight social</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/fitbit-founders-launch-ai-platform-to-help-families-monitor-their-health/" target="_blank">Fitbit founders launch AI platform to help families monitor their health</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 15:53</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Luffu uses AI in the background to gather and organize family information, learn day-to-day patterns, and flag notable changes so families can stay aligned and address potential well-being issues.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">Biotech & Health</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/paypal-hires-hps-enrique-lores-as-its-new-ceo/" target="_blank">PayPal hires HP’s Enrique Lores as its new CEO</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:15</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        PayPal is appointing CFO and COO Jamie Miller as interim CEO until March 1.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Fintech</span>
+                        
+                        <span class="keyword">CEOs</span>
+                        
+                        <span class="keyword">Enrique Lores</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/peak-xv-says-internal-disagreement-led-to-partner-exits-as-it-doubles-down-on-ai/" target="_blank">Peak XV says internal disagreement led to partner exits as it doubles down on AI</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:14</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Peak XV is transitioning board roles and opening a U.S. office while continuing to view India as its largest market.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Startups</span>
+                        
+                        <span class="keyword">Venture</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/indias-supreme-court-to-whatsapp-you-cannot-play-with-the-right-to-privacy/" target="_blank">India’s Supreme Court to WhatsApp: ‘You cannot play with the right to privacy’</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:38</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        India's top court is investigating WhatsApp’s data-sharing model, monopoly power, and user consent.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">Government & Policy</span>
+                        
+                        <span class="keyword">Social</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/vema-predicts-cheap-hydrogen-could-change-where-data-centers-are-built/" target="_blank">Vema predicts cheap hydrogen could change where data centers are built</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 12:15</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Vema Hydrogen drills wells to stimulate hydrogen production deep underground, which could result in some of the cheapest hydrogen available.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Climate</span>
+                        
+                        <span class="keyword">data centers</span>
+                        
+                        <span class="keyword">geologic hydrogen</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/03/avalanche-thinks-the-fusion-power-industry-should-think-smaller/" target="_blank">Avalanche thinks the fusion power industry should think smaller</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 11:00</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Avalanche has raised $29 million in fresh funding to pursue its unique approach to fusion power, which can currently fit on a table.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Climate</span>
+                        
+                        <span class="keyword">Fundraising</span>
+                        
+                        <span class="keyword">Founders Fund</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/fintech-ceo-and-forbes-30-under-30-alum-has-been-charged-for-alleged-fraud/" target="_blank">Fintech CEO and Forbes 30 Under 30 alum has been charged for alleged fraud</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 00:16</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        The startup CEO says she plans to publicly address the charges this week.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Fintech</span>
+                        
+                        <span class="keyword">Kalder</span>
+                        
+                        <span class="keyword">securities fraud</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/waymo-raises-16-billion-round-to-scale-robotaxi-fleet-london-tokyo/" target="_blank">Waymo raises $16B to scale robotaxi fleet internationally</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 23:04</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Waymo said the funds will be used to fuel its growth, which has accelerated over the past year and doesn't appear to be slowing.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Transportation</span>
+                        
+                        <span class="keyword">Alphabet</span>
+                        
+                        <span class="keyword">driverless cars</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/elon-musk-spacex-acquires-xai-data-centers-space-merger/" target="_blank">Elon Musk’s SpaceX officially acquires Elon Musk’s xAI, with plan to build data centers in space</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 22:21</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        The merger creates the world's most valuable private company and paves the way for Musk to try and prove out the usefulness of space-based data centers.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Space</span>
+                        
+                        <span class="keyword">Elon Musk</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/china-is-leading-the-fight-against-hidden-car-door-handles/" target="_blank">China is leading the fight against hidden car door handles</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 21:55</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Under new safety rules published Monday by China's Ministry of Industry and Information Technology, cars sold in the country must have mechanical releases on their door handles. The new rules, which go in effect January 1, 2027, will prohibit the hidden, electronically actuated door handles populari
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Transportation</span>
+                        
+                        <span class="keyword">China</span>
+                        
+                        <span class="keyword">EVs</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/adobe-animate-is-shutting-down-as-company-focuses-on-ai/" target="_blank">Adobe Animate is shutting down as company focuses on AI</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 21:15</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Adobe Animate will be discontinued on March 1, 2026, as Adobe shifts its focus to AI.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">Enterprise</span>
+                        
+                        <span class="keyword">Adobe</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/two-stanford-students-launch-2m-startup-accelerator-for-students-nationwide/" target="_blank">Two Stanford students launch $2M startup accelerator for students nationwide</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 20:39</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        "Breakthrough’s purpose is to fill in the funding and opportunity gap that exists in many of these ecosystems because students have historically lacked access to capital and the networks required to launch their entrepreneurial pursuits," co-founder Roman Scott said.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Startups</span>
+                        
+                        <span class="keyword">Venture</span>
+                        
+                        <span class="keyword">gen z</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/what-snowflakes-deal-with-openai-tells-us-about-the-enterprise-ai-race/" target="_blank">What Snowflake’s deal with OpenAI tells us about the enterprise AI race</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 19:09</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Snowflake is the latest enterprise to sign multi-year deals with multiple AI companies in what could be a sign to come of a future trend.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Enterprise</span>
+                        
+                        <span class="keyword">TC</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/firefox-will-soon-let-you-block-all-of-its-generative-ai-features/" target="_blank">Firefox will soon let you block all of its generative AI features</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 18:34</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Starting with Firefox 148 arriving later this month, users will find a new AI controls section within the desktop browser settings.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">Enterprise</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/grubhub-waives-delivery-service-fees-orders-over-50/" target="_blank">Grubhub waives delivery and service fees on restaurant orders over $50</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 18:22</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        In a bold move to close the gap with rivals, Grubhub is waiving delivery and service fees on restaurant orders over $50.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">food delivery</span>
+                        
+                        <span class="keyword">grubhub</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://techcrunch.com/2026/02/02/openai-launches-new-macos-app-for-agentic-coding/" target="_blank">OpenAI launches new macOS app for agentic coding</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-02 18:19</span>
+                        <span>📌 TechCrunch</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        OpenAI has released a new macOS app for Codex, integrating many of the agentic coding practices that have become popular since Codex launched last year.
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">agentic coding</span>
+                        
+                        <span class="keyword">codex</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/tech/873142/french-police-raid-x-investigation" target="_blank">French police raid X&#8217;s Paris office as UK investigation continues</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 17:10</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        A raid on X's Paris office was carried out by theParis prosecutor's cybercrime uniton Tuesday with Europol and French police, as part of an ongoing investigation that expanded in July to include Grok. As previously reported byReuters, Elon Musk and former X CEO Linda Yaccarino were also summoned for
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">News</span>
+                        
+                        <span class="keyword">Policy</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/games/873098/nintendo-switch-era-best-selling-console" target="_blank">The Switch is Nintendo&#8217;s best-selling console — and its most transformative</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 17:00</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Nintendo has had plenty of highs over its few decades in the video game industry. Popularizing home consoles with the NES, introducing new audiences to games through the Wii's motion controls, andthe touchscreen Trojan horse that was the Nintendo DS, to name a few. But often these successes were fol
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Analysis</span>
+                        
+                        <span class="keyword">Entertainment</span>
+                        
+                        <span class="keyword">Gaming</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/news/873093/claude-code-down-outage-anthropic" target="_blank">Claude Code was down, forcing developers to take a long coffee break</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:05</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Anthropic's Claude AI models experienced a major outage today, impacting products like Claude Code. Developers were seeing a 500 error when trying to use Claude Code, and Anthropicsaidthat it was seeing elevated error rates on its APIs "across all Claude models."Anthropic quickly identified the root
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">News</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/tech/872981/dyson-pencilvac-fluffycones-vacuum-hands-on-review" target="_blank">I didn’t expect to love Dyson’s PencilVac Fluffycones – but I did</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 16:00</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        ﻿Dyson’s new lightweight vacuum has no handle and maneuvers more like a Swiffer than a vacuum. | Photo by Jennifer Pattison Tuohy / The VergeAsThe Verge's residentrobot vacuum reviewer, I don't have a lot of time (or space) in my life for stick vacs, and frankly, the ones I have used have largely di
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Hands-on</span>
+                        
+                        <span class="keyword">Reviews</span>
+                        
+                        <span class="keyword">Smart Home</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/gadgets/872788/apple-ipad-mini-amazfit-active-2-fitness-tracker-deal-sale" target="_blank">Apple’s tiny but mighty iPad Mini is $100 off in every storage configuration</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 15:48</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        If your phone feels too small but most tablets feel too big, Apple’s latestiPad Minifunctions as a nice in-between. Thankfully, if you’ve been waiting for a discount, the base model with Wi-Fi and 128GB of storage is on sale atAmazonandBest Buyfor $399 ($100 off), which is $50 shy of its best price 
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Apple</span>
+                        
+                        <span class="keyword">Deals</span>
+                        
+                        <span class="keyword">Gadgets</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/podcast/872998/anthropic-claude-books-netflix-theaters-vergecast" target="_blank">Millions of books died so Claude could live</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 15:19</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        WhenChatGPT launched, in November of 2022, it started a race that almost immediately consumed the tech industry. OpenAI didn't invent the concept of AI, but most of the state-of-the-art technology was confined to research labs at companies and institutions around the world. Then, suddenly, it was ev
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Netflix</span>
+                        
+                        <span class="keyword">Podcasts</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/transportation/873039/china-ban-hidden-tesla-door-handles-january-2027" target="_blank">China is banning hidden electric door handles for EVs</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:53</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Close-up of flush-mounted, retracting door handle on Tesla automobile, San Ramon, California, in September of 2020. | Gado via Getty ImagesChina is banning Tesla-style concealed door handles on electric vehicles to address safety concerns regarding people getting trapped inside their cars. The ban w
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Electric Cars</span>
+                        
+                        <span class="keyword">News</span>
+                        
+                        <span class="keyword">Tesla</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/tech/872963/fitbit-james-park-eric-friedman-luffu-caregivers-family-health-app" target="_blank">Fitbit’s founders launch a new platform for monitoring your entire family’s health</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:28</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        James Park and Eric Friedman, the co-founders of Fitbit wholeft Google two years ago, haveannounced a new venture called Luffu. Described as an "intelligent family care system,"Luffu collects and logs health and medical informationfrom connected devices, other platforms like Apple Health and Fitbit,
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Apps</span>
+                        
+                        <span class="keyword">Health</span>
+                        
+                        <span class="keyword">Science</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/ai-artificial-intelligence/872961/humans-infiltrating-moltbook-openclaw-reddit-ai-bots" target="_blank">Humans are infiltrating the social network for AI bots</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:15</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Ordinary social networks face a constant onslaught of chatbots pretending to be human. A new social platform for AI agents may face the opposite problem: getting clogged up by humans pretending to post as bots.Moltbook - a website meant for conversations between agents from the platform OpenClaw - w
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">AI</span>
+                        
+                        <span class="keyword">Analysis</span>
+                        
+                        <span class="keyword">Report</span>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="article">
+                    <div class="article-header">
+                        <div class="article-title">
+                            <a href="https://www.theverge.com/news/872972/disney-ceo-bob-iger-replacement-josh-damaro" target="_blank">Disney says Josh D&#8217;Amaro will replace Bob Iger as CEO</a>
+                        </div>
+                        <div class="hot-score">热度: 50</div>
+                    </div>
+                    
+                    <div class="article-meta">
+                        <span>📅 2026-02-03 14:13</span>
+                        <span>📌 The Verge</span>
+                        
+                        <span>💡 AI不可用</span>
+                        
+                    </div>
+                    
+                    <div class="article-summary">
+                        Disney has picked a successor for longtime CEO Bob Iger. On Tuesday, the entertainment giantannounced that its theme parks head, Josh D'Amaro, will take over as CEO on March 18th, 2026.Rumors about Iger's replacementhave been swirlingfor more than a year now. After a 15-year-long tenure as Disney's 
+                    </div>
+                    
+                    
+                    <div class="article-keywords">
+                        
+                        <span class="keyword">Disney</span>
+                        
+                        <span class="keyword">News</span>
+                        
+                        <span class="keyword">Streaming</span>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        
+        <div class="footer">
+            <p>由 AI资讯哨兵 自动生成 | Powered by <a href="https://www.deepseek.com" target="_blank">DeepSeek</a></p>
+            <p>生成时间: 2026-02-03 17:20:55</p>
+            <a href="archive/" class="archive-link">📚 查看历史存档</a>
+        </div>
+    </div>
+</body>
+</html>
